@@ -1,4 +1,4 @@
-BCIT-Comp1409
+BCIT-Comp1408
 =============
 
-This is the Java Homework from my Comp 1409 class at BCIT
+This is the Java Homework from my Comp 1408 class at BCIT
