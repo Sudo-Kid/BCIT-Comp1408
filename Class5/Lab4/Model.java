@@ -156,7 +156,7 @@ public class Model
         return smokes;
     }
     
-    public void getModelDetails()
+    public void displayModelDetails()
     {
         System.out.println("Name: " + firstName + " " + lastName);
         System.out.println("Height: " + height);
