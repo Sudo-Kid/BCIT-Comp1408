@@ -189,13 +189,13 @@ public class Model
      */
     public int calculatePayPerHour()
     {
-        payPerHour = BASE_RATE;
+        int payPerHour = BASE_RATE;
 
-        if (TALL_INCHES =< height && THIN_POUNDS =< pounds) {
+        if (TALL_INCHES <= height && THIN_POUNDS <= pounds) {
             payPerHour += TALL_THIN_BONUS;
         }
 
-        if (travel == true) {
+        if (canTravel == true) {
             payPerHour += TRAVEL_BONUS;
         }
 
