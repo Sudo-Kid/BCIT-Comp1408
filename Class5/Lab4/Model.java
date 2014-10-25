@@ -15,6 +15,15 @@ public class Model
     private boolean canTravel;
     private boolean smokes;
 
+    // Adding static variables
+    public static final int IN_PER_FOOT = 12; 
+    public static final int BASE_RATE = 60; 
+    public static final int TALL_INCHES = 67; 
+    public static final double THIN_POUNDS = 140.0; 
+    public static final int TALL_THIN_BONUS = 5; 
+    public static final int TRAVEL_BONUS = 4; 
+    public static final int SMOKER_DEDUCTION = 10; 
+
     /**
      * Constructor for objects of class Model
      */
@@ -156,12 +165,44 @@ public class Model
         return smokes;
     }
     
+    // Displays the models details
     public void displayModelDetails()
     {
         System.out.println("Name: " + firstName + " " + lastName);
-        System.out.println("Height: " + height + " inches");
+        System.out.println(convertHeightToFeetInches());
         System.out.println("Weight: " + weight + " pounds");
         System.out.println("Travels: " + canTravel);
         System.out.println("Somkes: " + smokes);
+        System.out.println("Hourly rate: " + calculatePayPerHour());
+    }
+
+    /**
+     * @return Converts the models height in inches to feet
+     */
+    public String convertHeightToFeetInches()
+    {
+        return (height / IN_PER_FOOT) + " feet " + (height % IN_PER_FOOT) + " inches";
+    }
+
+    /**
+     * @return Calculates the models pay per hour
+     */
+    public int calculatePayPerHour()
+    {
+        int payPerHour = BASE_RATE;
+
+        if (TALL_INCHES <= height && THIN_POUNDS <= weight) {
+            payPerHour += TALL_THIN_BONUS;
+        }
+
+        if (canTravel == true) {
+            payPerHour += TRAVEL_BONUS;
+        }
+
+        if (smokes == true) {
+            payPerHour -= SMOKER_DEDUCTION;
+        }
+
+        return payPerHour;
     }
 }

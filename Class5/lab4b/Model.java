@@ -165,17 +165,44 @@ public class Model
         return smokes;
     }
     
+    // Displays the models details
     public void displayModelDetails()
     {
         System.out.println("Name: " + firstName + " " + lastName);
-        System.out.println("Height: " + height + " inches");
+        System.out.println(convertHeightToFeetInches());
         System.out.println("Weight: " + weight + " pounds");
         System.out.println("Travels: " + canTravel);
         System.out.println("Somkes: " + smokes);
+        System.out.println("Hourly rate: " + calculatePayPerHour());
     }
 
+    /**
+     * @return Converts the models height in inches to feet
+     */
     public String convertHeightToFeetInches()
     {
-        return (height / IN_PER_FOOT) + " feet " + (height % IN_PER_FOOT) + " inches"
+        return (height / IN_PER_FOOT) + " feet " + (height % IN_PER_FOOT) + " inches";
+    }
+
+    /**
+     * @return Calculates the models pay per hour
+     */
+    public int calculatePayPerHour()
+    {
+        payPerHour = BASE_RATE;
+
+        if (TALL_INCHES =< height && THIN_POUNDS =< pounds) {
+            payPerHour += TALL_THIN_BONUS;
+        }
+
+        if (travel == true) {
+            payPerHour += TRAVEL_BONUS;
+        }
+
+        if (smokes == true) {
+            payPerHour -+ SMOKER_DEDUCTION;
+        }
+
+        return payPerHour;
     }
 }
