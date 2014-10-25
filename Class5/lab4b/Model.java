@@ -169,7 +169,7 @@ public class Model
     public void displayModelDetails()
     {
         System.out.println("Name: " + firstName + " " + lastName);
-        System.out.println(convertHeightToFeetInches());
+        System.out.println("Height: " + convertHeightToFeetInches());
         System.out.println("Weight: " + weight + " pounds");
         System.out.println("Travels: " + canTravel);
         System.out.println("Somkes: " + smokes);
