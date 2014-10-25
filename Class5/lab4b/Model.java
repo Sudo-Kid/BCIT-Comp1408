@@ -191,7 +191,7 @@ public class Model
     {
         int payPerHour = BASE_RATE;
 
-        if (TALL_INCHES <= height && THIN_POUNDS <= pounds) {
+        if (TALL_INCHES <= height && THIN_POUNDS <= weight) {
             payPerHour += TALL_THIN_BONUS;
         }
 
@@ -200,7 +200,7 @@ public class Model
         }
 
         if (smokes == true) {
-            payPerHour -+ SMOKER_DEDUCTION;
+            payPerHour -= SMOKER_DEDUCTION;
         }
 
         return payPerHour;
