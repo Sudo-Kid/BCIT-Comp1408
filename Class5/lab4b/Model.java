@@ -52,6 +52,18 @@ public class Model
         setCanTravel(_canTravel);
         setSmokes(_smokes);
     }
+
+    /**
+     * @return _convertBoolean to yes or no rather then True or False for booleans
+     */
+    public void booleanConvert(boolean _convertBoolean)
+    {
+        if (_convertBoolean) {
+            return "Yes";
+        }
+
+        return "No";
+    }
     
     /**
      * @param _height used to set the models height as a int
@@ -171,8 +183,8 @@ public class Model
         System.out.println("Name: " + firstName + " " + lastName);
         System.out.println("Height: " + convertHeightToFeetInches());
         System.out.println("Weight: " + weight + " pounds");
-        System.out.println("Travels: " + canTravel);
-        System.out.println("Somkes: " + smokes);
+        System.out.println("Travels: " + booleanConvert(canTravel));
+        System.out.println("Somkes: " + booleanConvert(smokes));
         System.out.println("Hourly rate: " + calculatePayPerHour());
     }
 
