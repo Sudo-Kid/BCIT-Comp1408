@@ -205,8 +205,8 @@ public class Vehicle
      */
     public double calculateProfitMargin()
     {
-        profitMargin = (sellingPrice - dealerCost) / sellingPrice;
-        return profitMargin;
+        profitMargin = ((sellingPrice - dealerCost) / sellingPrice) * 100;
+        return (int)Math.round(profitMargin);
     }
     
     /**
