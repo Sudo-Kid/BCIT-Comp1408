@@ -195,11 +195,11 @@ public class Model
             payPerHour += TALL_THIN_BONUS;
         }
 
-        if (canTravel == true) {
+        if (canTravel) {
             payPerHour += TRAVEL_BONUS;
         }
 
-        if (smokes == true) {
+        if (smokes) {
             payPerHour -= SMOKER_DEDUCTION;
         }
 
