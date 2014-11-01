@@ -1,0 +1,16 @@
+NumberDisplay n = new NumberDisplay(60);
+n.getDisplayValue()
+    returned String "00"
+n.setValue(25);
+n.getDisplayValue()
+    returned String "25"
+n.increment();
+n.increment();
+n.getDisplayValue()
+    returned String "27"
+n.setValue(59);
+n.getDisplayValue()
+    returned String "59"
+n.increment();
+n.getDisplayValue()
+    returned String "00"
