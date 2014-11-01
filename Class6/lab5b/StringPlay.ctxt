@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=
+comment0.target=StringPlay()
+comment0.text=\n\ Constructor\ for\ objects\ of\ class\ StringPlay\n
+comment1.params=
+comment1.target=void\ playWithStrings()
+comment2.params=
+comment2.target=void\ compareStrings()
+comment2.text=\ \n\ \ \ \ \ \ \ \ This\ method\ will\ prompt\ the\ user\ to\ type\ two\ strings\ and\ will\ put\ them\ into\ different\ \n\ \ \ \ \ \ \ \ String\ variables.\ Then\ it\ will\ compare\ those\ strings\ to\ see\ if\ they\ are\ the\ same,\ i.e.\ have\ \n\ \ \ \ \ \ \ \ the\ same\ letters\ in\ the\ same\ order.\ If\ the\ strings\ are\ the\ same,\ \u201Csame\u201D\ will\ be\ displayed\ \n\ \ \ \ \ \ \ \ on\ the\ screen.\ If\ they\ are\ different,\ \u201Cdifferent\u201D\ will\ be\ displayed.\ To\ compare\ two\ String\ \n\ \ \ \ \ \ \ \ objects\ you\ must\ use\ the\ equals()\ method\ of\ the\ String\ class.\n
+numComments=3
