@@ -20,38 +20,45 @@ public class DayDisplay
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
+     * @param  
      */
     public DayDisplay(int dayToSet)
     {
-        day = dayToSet;
+        day = new NumberDisplay(DAYS_OF_WEEK);
+        day.setValue(dayToSet);
     }
 
     public String getCurrentDay()
     {
-        if (day == 0) {
+        if (day.getValue() == 0) {
+            System.out.println("Sunday");
             return "Sunday";
-        } else if (day == 1) {
+        } else if (day.getValue() == 1) {
+            System.out.println("Monday");
             return "Monday";
-        } else if (day == 2) {
+        } else if (day.getValue() == 2) {
+            System.out.println("Thuesday");
             return "Thuesday";
-        } else if (day == 3) {
+        } else if (day.getValue() == 3) {
+            System.out.println("Wednesday");
             return "Wednesday";
-        } else if (day == 4) {
+        } else if (day.getValue() == 4) {
+            System.out.println("Thursday");
             return "Thursday";
-        } else if (day == 5) {
+        } else if (day.getValue() == 5) {
+            System.out.println("Firday");
             return "Firday";
-        } else if (day == 6) {
+        } else if (day.getValue() == 6) {
+            System.out.println("Saturday");
             return "Saturday";
         } else {
+            System.out.println("YOUR DAY IS INVALID!! and you should feel bad!!");
             return "YOUR DAY IS INVALID!! and you should feel bad!!";
         }
     }
 
     public void incrementDay()
     {
-        day++;
+        day.increment();
     }
 }

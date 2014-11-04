@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.params=
+comment0.target=DayDisplay()
+comment0.text=\n\ Constructor\ for\ objects\ of\ class\ DayDisplay\n
+comment1.params=dayToSet
+comment1.target=DayDisplay(int)
+comment1.text=\n\ @param\ \ \n
+comment2.params=
+comment2.target=java.lang.String\ getCurrentDay()
+comment3.params=
+comment3.target=void\ incrementDay()
+numComments=4
