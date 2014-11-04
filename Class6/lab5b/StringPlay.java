@@ -1,5 +1,5 @@
 /**
- * This is a class that takes a users input then compares it or displays it in different formats.
+ * This is a class that takes a users input then compares it or displays it in different formats.ue
  * 
  * @author Emett Speer A00735036 
  * @version 1.0

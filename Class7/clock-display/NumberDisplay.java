@@ -15,6 +15,11 @@ public class NumberDisplay
     private int limit;
     private int value;
 
+    public NumberDisplay()
+    {
+
+    }
+
     /**
      * Constructor for objects of class NumberDisplay.
      * Set the limit at which the display rolls over.
@@ -66,5 +71,21 @@ public class NumberDisplay
     public void increment()
     {
         value = (value + 1) % limit;
+    }
+
+    /**
+     * @param sets the value of the limit field as an int
+     */
+    public void setLimit(int _limit)
+    {
+        limit = _limit;
+    }
+
+    /**
+     * @return Gets the value of the limit field as an int
+     */
+    public int getLimit()
+    {
+        return limit;
     }
 }
