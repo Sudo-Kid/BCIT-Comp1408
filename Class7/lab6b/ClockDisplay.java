@@ -16,6 +16,7 @@ public class ClockDisplay
 {
     private NumberDisplay hours;
     private NumberDisplay minutes;
+    private NumberDisplay amPM;
     private String displayString;    // simulates the actual display
     
     /**
@@ -24,8 +25,10 @@ public class ClockDisplay
      */
     public ClockDisplay()
     {
-        hours = new NumberDisplay(24);
+        hours = new NumberDisplay(13);
         minutes = new NumberDisplay(60);
+        amPM = new NumberDisplay(2);
+
         updateDisplay();
     }
 
@@ -34,11 +37,12 @@ public class ClockDisplay
      * creates a new clock set at the time specified by the 
      * parameters.
      */
-    public ClockDisplay(int hour, int minute)
+    public ClockDisplay(int hour, int minute, String _amPM)
     {
-        hours = new NumberDisplay(24);
+        hours = new NumberDisplay(13);
         minutes = new NumberDisplay(60);
-        setTime(hour, minute);
+        amPM = new NumberDisplay(2);
+        setTime(hour, minute, _amPM);
     }
 
     /**
@@ -51,6 +55,10 @@ public class ClockDisplay
         if(minutes.getValue() == 0) {  // it just rolled over!
             hours.increment();
         }
+        if(hours.getValue() == 12) {
+           amPM.increment();
+        }
+
         updateDisplay();
     }
 
@@ -58,15 +66,42 @@ public class ClockDisplay
      * Set the time of the display to the specified hour and
      * minute.
      */
-    public void setTime(int hour, int minute)
+    public void setTime(int hour, int minute, String _amPM)
     {
         hours.setValue(hour);
         minutes.setValue(minute);
+        convertToNumber(_amPM);
+        
         updateDisplay();
     }
 
+    public void convertToNumber(String _amPM)
+    {
+        if(_amPM.equals("am")) {
+            amPM.setValue(0);
+        } else if (_amPM.equals("pm")) {
+            amPM.setValue(1);
+        } else {
+            System.out.println("You must set am or pm.");
+        }
+    }
+
     /**
-     * Return the current time of this display in the format HH:MM.
+     * @return Converts the in value of AMPM to a string
+     */
+    public String convertToAMPM()
+    {
+        if(amPM.getValue() == 0) {
+            return "am";
+        } if (amPM.getValue() == 1) {
+            return "pm";
+        } else {
+            return "Your number is to large and you should feel bad!!";
+        }
+    }
+
+    /**
+     * Return the current time of this display in the format HH:MM:AM/PM.
      */
     public String getTime()
     {
@@ -79,6 +114,6 @@ public class ClockDisplay
     private void updateDisplay()
     {
         displayString = hours.getDisplayValue() + ":" + 
-                        minutes.getDisplayValue();
+                        minutes.getDisplayValue() + " " + convertToAMPM();
     }
 }
