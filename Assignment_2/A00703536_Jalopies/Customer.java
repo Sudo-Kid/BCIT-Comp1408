@@ -30,11 +30,11 @@ public class Customer
      */
     public Customer(String _firstName, String _lastName, String _driversLicense, String _address, String _phoneNumber)
     {
-        setFirstName();
-        setLastName();
-        setDriversLicense();
-        setAddress();
-        setPhoneNumber();
+        setFirstName(_firstName);
+        setLastName(_lastName);
+        setDriversLicense(_driversLicense);
+        setAddress(_address);
+        setPhoneNumber(_phoneNumber);
     }
 
     /**
@@ -90,7 +90,7 @@ public class Customer
      */
     public void setDriversLicense(String _driversLicense)
     {
-        if(verifyString(_driversLicense != null)) {
+        if(verifyString(_driversLicense) != null) {
             driversLicense = _driversLicense;
         }
     }
