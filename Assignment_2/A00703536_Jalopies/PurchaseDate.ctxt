@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.params=
+comment0.target=PurchaseDate()
+comment0.text=\n\ Constructor\ for\ objects\ of\ class\ PurchaseDate\n
+comment1.params=theYear\ theMonth\ theDay
+comment1.target=PurchaseDate(int,\ int,\ int)
+comment1.text=\n\ @param\ \ \n
+comment2.params=_year
+comment2.target=void\ setYear(int)
+comment3.params=_month
+comment3.target=void\ setMonth(int)
+comment4.params=_day
+comment4.target=void\ setDay(int)
+comment5.params=
+comment5.target=int\ setYear()
+comment6.params=
+comment6.target=int\ setMonth()
+comment7.params=
+comment7.target=int\ setDay()
+comment8.params=
+comment8.target=java.lang.String\ getFullDate()
+numComments=9

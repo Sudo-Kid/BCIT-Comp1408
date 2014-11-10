@@ -1,233 +1,234 @@
-
 /**
- * Class for creating a used vehicle
  * 
- * @author Emett Speer A00703536
- * @version 0.01
+ * @author Bullwinkle Moose 
+ * @version 1.0 
  */
-public class Vehicle
-{
-    // instance variables - replace the example below with your own
-    private String stockCode;
-    private String make;
-    private String model;
-    private int year;
-    private double dealerCost;
-    private double sellingPrice;
-    private double profitMargin;
+import java.text.DecimalFormat;
 
-    /**
-     * Constructor for objects of class Vehicle
-     */
-    public Vehicle()
-    {
-        
-    }
+public class Vehicle {
 
-    /**
-     * Constructor for objects of class Vehicle with params
-     * 
-     * @param _stockCode used to initialize the stock code field as a String
-     * @param _make used to initialize the make field as a String
-     * @param _model used to initialize the model field as a String
-     * @param _year used to initialize the year field as an int
-     */
-    public Vehicle(String _stockCode, String _make, String _model, int _year)
-    {
-        if(!_stockCode.isEmpty() && _stockCode != null) {
-            stockCode = _stockCode;
-        } else {
-            System.out.println("You must provide a stock code!");
-        }
-        
-        if(!_make.isEmpty() && _make != null) {
-            make = _make;
-        } else {
-            System.out.println("You must privde a make!");
-        }
-        
-        if(!_model.isEmpty() && _make != null) {
-            model = _model;
-        } else {
-            System.out.println("You must privde a model!");
-        }
-        
-        if(_year >= 1950 && _year <= 2014) {
-            year = _year;
-        } else {
-            System.out.println("You must privde a year between 1950 and the current year!");
-        }
-    }
-    
-    /**
-     * @return Get the contents of the the stock code field in string format
-     */
-    public String getStockCode()
-    {
-        return stockCode;
-    }
-    
-    /**
-     * @return Get the contents of the make field in a string format
-     */
-    public String getMake()
-    {
-        return make;
-    }
-    
-    /**
-     * @return Get the contents of the model field in a string format
-     */
-    public String getModel()
-    {
-        return model;
-    }
-    
-    /**
-     * @return Get contents of the year field in an int format
-     */
-    public int getYear()
-    {
-        return year;
-    }
-    
-    /**
-     * @return Get the contents of the dealer cost field in a double format
-     */
-    public double getDealerCost()
-    {
-        return dealerCost;
-    }
-    
-    /**
-     * @return Get the contents of the selling price field in a double format
-     */
-    public double getSellingPrice()
-    {
-        return sellingPrice;
-    }
-    
-    /**
-     * @return Get the contents of the profit margin field in a double format
-     */
-    public double getProfitMargin()
-    {
-        return profitMargin;
-    }
-    
-    /**
-     * @param _stockCode used to set the stock code field in a string format
-     */
-    public void setStockCode(String _stockCode)
-    {
-        if(!_stockCode.isEmpty() && _stockCode != null) {
-            stockCode = _stockCode;
-        } else {
-            System.out.println("You must provide a stock code!");
-        }
-    }
-    
-    /**
-     * @param _make used to set the make field in a string format
-     */
-    public void setMake(String _make) 
-    {
-        if(!_make.isEmpty() && _make != null) {
-            make = _make;
-        } else {
-            System.out.println("You must provide a make!");
-        }
-    }
-    
-    /**
-     * @param _model used to set the model field in a string format
-     */
-    public void setModel(String _model)
-    {
-        if(!_model.isEmpty() && _model != null) {
-            model = _model;
-        } else {
-            System.out.println("You must provide a model!");
-        }
-    }
-    
-    /**
-     * @param _year used to set the year field in an int format
-     */
-    public void setYear(int _year)
-    {
-        if(_year >= 1950 && _year <= 2014) {
-            year = _year;
-        } else {
-            System.out.println("You must privde a year between 1950 and the current year!");
-        }
-    }
-    
-    /**
-     * @param _dealerCost used to set the dealer cost field in a double format
-     */
-    public void setDealerCost(double _dealerCost)
-    {
-        if(_dealerCost >= 0.00) {
-            dealerCost = _dealerCost;
-        } else {
-            System.out.println("Dealer cost must be 0 or greater");
-        }
-    }
-    
-    /**
-     * @param _sellingPrice used to check if the selling price is 25% or higher then the dealer cost and if it is then set it in a double format
-     */
-    public void checkStandardSellingPrice(double _sellingPrice)
-    {
-        if((dealerCost * 100) / _sellingPrice >= 25) {
-            sellingPrice = _sellingPrice;
-        } else {
-            System.out.println("Dealer Cost: " + dealerCost);
-            System.out.println("Selling Price: " + _sellingPrice);
-        }
-    }
-    
-    /**
-     * @param _sellingPrice used to set the selling price field in a double format
-     */
-    public void setSellingPrice(double _sellingPrice)
-    {
-        if(_sellingPrice >= 0) {
-            sellingPrice = _sellingPrice;
-        } else {
-            System.out.println("Selling Price must be 0 or greater");
-        }
-    }
-    
-    /**
-     * @return Calculates the profit margin as a % then assigns it to the profit margin field
-     */
-    public double calculateProfitMargin()
-    {
-        profitMargin = ((sellingPrice - dealerCost) / sellingPrice) * 100;
-        return (int)Math.round(profitMargin);
-    }
-    
-    /**
-     * @return Gets the profit from the sale of a vehicle in a double format
-     */
-    public double displayProfit()
-    {
-        return (sellingPrice - dealerCost);
-    }
-    
-    /**
-     * Displays the details for a vehicle
-     */
-    public void printDetails()
-    {
-        System.out.println("Jalopies Are Us Vehicle Summary:");
-        System.out.println("Vehicle: " + year + " " + make + " " + model);
-        System.out.println("Stock Code: " + stockCode);
-        System.out.println("Dealer Cost: $" + dealerCost);
-        System.out.println("Selling Price: $" + sellingPrice);
-        System.out.println("Profit Margin: " + profitMargin + "%");
-        System.out.println("Dollar Profit: $" + displayProfit());
-    }
+	private String stockCode;
+	private String make;
+	private String model;
+	private int year;
+	private double dealerCost;
+	private double sellingPrice;
+	private double profitMargin;
+	
+	private static final int CURRENT_YEAR = 2014;
+	private static final int OLDEST_YEAR = 1950;
+
+
+	/**
+	 * Default Constructor for Objects of class Vehicle.
+	 */
+	public Vehicle() {
+
+	}
+
+	/**
+	 * Constructor for Objects of class Vehicle.
+	 * 
+	 * @param vehicle stockCode to initialize stockCode field
+	 * @param make to initialize make field
+	 * @param model to initialize model field
+	 * @param year to initialize year field
+	 */
+	public Vehicle(String stockCode, String make, String model, int year) {
+
+		if (stockCode != null && stockCode.trim().length() > 0) {
+			if (make != null && make.trim().length() > 0) {
+				if (model != null && model.trim().length() > 0) {
+					if (year >= OLDEST_YEAR && year <= CURRENT_YEAR) {
+
+						this.stockCode = stockCode;
+						this.make = make;
+						this.model = model;
+						this.year = year;
+					}
+
+				}
+			}
+		} else {
+			new Vehicle();
+		}
+	}
+
+	/**
+	 * @return the vehicle stockCode as String
+	 */
+	public String getStockCode() {
+		return stockCode;
+	}
+
+	/**
+	 * @return the make as String
+	 */
+	public String getMake() {
+		return make;
+	}
+
+	/**
+	 * @return the model as String
+	 */
+	public String getModel() {
+		return model;
+	}
+
+	/**
+	 * @return the year as int
+	 */
+	public int getYear() {
+		return year;
+	}
+
+	/**
+	 * @return the dealerCost as double
+	 */
+	public double getdealerCost() {
+		return dealerCost;
+	}
+
+	/**
+	 * @return the sellingPrice as double
+	 */
+	public double getSellingPrice() {
+		return sellingPrice;
+	}
+
+	/**
+	 * @return the profit margin on the vehicle if sold, as double
+	 */
+	public double getProfitMargin() {
+		return profitMargin;
+	}
+
+	/**
+	 * @param vehicle stockCode sets the value for the stockCode field.
+	 */
+	public void setStockCode(String stockCode) {
+		if (stockCode != null && stockCode.trim().length() > 0) {
+			this.stockCode = stockCode;
+		}else{
+			
+			System.out.println("invalid input");
+		}
+	}
+
+	/**
+	 * @param make sets the value for the make field.
+	 */
+	public void setMake(String make) {
+		if (make != null && make.trim().length() > 0) {
+			this.make = make;
+		}else{
+			
+			System.out.println("invalid input");
+		}
+	}
+
+	/**
+	 * @param model sets the value for the model field.
+	 */
+	public void setModel(String model) {
+		if (model != null && model.trim().length() > 0) {
+			this.model = model;
+		}else{
+			
+			System.out.println("invalid input");
+		}
+	}
+
+	/**
+	 * @param year sets the value for the year field
+	 */
+	public void setYear(int year) {
+		if (year >= OLDEST_YEAR && year <= CURRENT_YEAR) {
+			this.year = year;
+		}else{
+			
+			System.out.println("invalid input");
+		}
+	}
+
+	/**
+	 * @param dealerCost sets the value for the dealerCost field
+	 */
+	public void setDealerCost(double dealerCost) {
+		if (dealerCost >= 0) {
+			this.dealerCost = dealerCost;
+			
+		} else {
+			System.out.println("invalid input");
+		}
+	}
+
+	/**
+	 * @param sellingPrice sets the sellingPrice only if it is at least 25% than dealerCost
+	 */
+	public void checkStandardSellingPrice(double sellingPrice) {
+		if (sellingPrice >= (dealerCost  * 1.25)) {
+			this.sellingPrice = sellingPrice;
+			
+		} else {
+			System.out.println("The dealer cost is: $" + dealerCost + ". Sale price $" + sellingPrice
+					+ " is not high enough");
+			
+		}
+	}
+
+	/**
+	 * @param sellingPrice sets the value for the sellingPrice field
+	 */
+	public void setSellingPrice(double sellingPrice) {
+		if (sellingPrice >= 0) {
+			this.sellingPrice = sellingPrice;
+			
+		} else {
+			System.out.println("invalid input");
+		}
+	}
+
+	/**
+	 * calculates the profit margin for selling a vehicle
+	 */
+	public void calculateProfitMargin() {
+		profitMargin = (sellingPrice - dealerCost) / sellingPrice;
+	}
+	
+	/**
+	 * @return the profit on selling a vehicle as a dollar value.
+	 */
+	public double displayProfit() {
+		return sellingPrice - dealerCost;
+	}
+
+	/**
+	 * formats and displays all vehicle information.
+	 */
+	public void printDetails() {
+		DecimalFormat formatter = new DecimalFormat("$0.00");
+		DecimalFormat percentFormatter  = new DecimalFormat("0%");
+		
+		System.out.println("Jalopies Are Us Vehicle Summary: ");
+		System.out.println("Vehicle: " + year + " " + make + " " + model);
+		System.out.println("Stock Code:" + stockCode);
+		System.out.println("Dealer Cost: " + formatter.format(dealerCost));
+		System.out.println("Selling Price: " + formatter.format(sellingPrice));
+		System.out.println("Profit Margin: " + percentFormatter.format(profitMargin));
+		System.out.println("Dollar Profit: " + formatter.format(displayProfit()));
+	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "Vehicle [stockCode=" + stockCode + ", make=" + make
+				+ ", model=" + model + ", year=" + year + ", dealerCost="
+				+ dealerCost + ", sellingPrice=" + sellingPrice
+				+ ", profitMargin=" + profitMargin + "]";
+	}
+	
+	
 }
