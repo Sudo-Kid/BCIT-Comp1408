@@ -20,51 +20,72 @@ public class Cat
     }
 
     /**
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
+     * @param _name used to initialize the business name feild
+     * @param _yearOfBirth used to initialize the business name feild
+     * @param _weightInKilos used to initialize the business name feild
      */
-    public sampleMethod(String _name, int _yearOfBirth, double _weightInKilos)
+    public Cat(String _name, int _yearOfBirth, double _weightInKilos)
     {
-
+        setName(_name);
+        setYearOfBirth(_yearOfBirth);
+        setWeightInKilos(_weightInKilos);
     }
 
+    /**
+     * @param _name used to set name field as a string
+     */
     public void setName(String _name)
     {
         if(!_name.isEmpty() && _name != null) {
             name = _name;
         } else {
-            System.out.println("Please provide a name.")
+            System.out.println("Please provide a name.");
         }
     }
 
+    /**
+     * @param _yearOfBirth used to set the year of birth field as an int
+     */
     public void setYearOfBirth(int _yearOfBirth)
     {
         if(_yearOfBirth >= 0){
             yearOfBirth = _yearOfBirth;
         } else {
-            System.out.println("Your year of birth must not be negative.")
+            System.out.println("Your year of birth must not be negative.");
         }
     }
 
+    /**
+     * @param _weightInKilos used to set the weight in kilos field as a double
+     */
     public void setWeightInKilos(double _weightInKilos)
     {
         if(_weightInKilos >= 0){
             weightInKilos = _weightInKilos;
         } else {
-            System.out.println("Your weight must not be negative.")
+            System.out.println("Your weight must not be negative.");
         }
     }
 
+    /**
+     * @return Gets the value of the name field as a string
+     */
     public String getName()
     {
         return name;
     }
 
+    /**
+     * @return Gets the value of the yeaer of birth field as an int
+     */
     public int getYearOfBirth()
     {
         return yearOfBirth;
     }
     
+    /**
+     * @return Gets the value of the weight in kilos field as a double
+     */
     public double getWeightInKilos()
     {
         return weightInKilos;

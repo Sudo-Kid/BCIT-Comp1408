@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Cattery()
+comment0.text=\n\ Constructor\ for\ objects\ of\ class\ Cattery\n
+comment1.params=_businessName
+comment1.target=Cattery(java.lang.String)
+comment1.text=\n\ @param\ \ _businessName\ used\ to\ initialize\ the\ business\ name\ feild\n
+comment2.params=_businessName
+comment2.target=void\ setBusinessName(java.lang.String)
+comment2.text=\n\ @param\ \ _businessName\ used\ to\ set\ the\ business\ name\ feild\n
+comment3.params=_cat
+comment3.target=void\ addCat(Cat)
+comment3.text=\n\ @param\ \ _cat\ used\ to\ add\ a\ cat\ to\ the\ array\n
+comment4.params=index
+comment4.target=void\ getCat(int)
+comment5.params=index
+comment5.target=void\ removeCat(int)
+comment6.params=
+comment6.target=void\ displayCats()
+numComments=7
