@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Card()
+comment0.text=\n\ Constructor\ for\ objects\ of\ class\ Card\n
+comment1.params=description\ suit\ value
+comment1.target=Card(java.util.ArrayList,\ java.util.ArrayList,\ java.util.ArrayList)
+comment1.text=\n\ @param\ \ \n
+comment2.params=
+comment2.target=java.util.ArrayList\ getDescription()
+comment3.params=
+comment3.target=java.util.ArrayList\ getValue()
+comment4.params=
+comment4.target=java.util.ArrayList\ getSuit()
+comment5.params=description
+comment5.target=void\ setDescription(java.util.ArrayList)
+comment6.params=value
+comment6.target=void\ setValue(java.util.ArrayList)
+comment7.params=suit
+comment7.target=void\ setSuit(java.util.ArrayList)
+numComments=8
