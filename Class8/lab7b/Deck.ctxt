@@ -6,4 +6,6 @@ comment1.params=cardToAdd
 comment1.target=void\ addCard(Card)
 comment2.params=
 comment2.target=Card\ takeCard()
-numComments=3
+comment3.params=
+comment3.target=void\ showDeck()
+numComments=4

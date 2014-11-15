@@ -2,7 +2,7 @@
 /**
  * Write a description of class Card here.
  * 
- * @author (your name) 
+ * @author Emett Speer A00703536
  * @version (a version number or a date)
  */
 public class Card
