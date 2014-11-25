@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Deck()
+comment0.text=\n\ Constructor\ for\ objects\ of\ class\ Deck\n
+comment1.params=cardToAdd
+comment1.target=void\ addCard(Card)
+comment2.params=
+comment2.target=Card\ takeCard()
+comment3.params=
+comment3.target=void\ showDeck()
+comment4.params=index1\ index2
+comment4.target=void\ swap(int,\ int)
+comment5.params=
+comment5.target=void\ shuffle()
+numComments=6
