@@ -93,15 +93,13 @@ public class Deck
 
         showDeck();
         
-        while(TIMES_TO_SHUFFLE >= counter) {
+        while(TIMES_TO_SHUFFLE > counter++) {
             int index1 = randomGenerator.nextInt(deckOfCards.size());
             int index2 = randomGenerator.nextInt(deckOfCards.size());
 
             swap(index1, index2);
 
             System.out.println("THIS IS THE END OF THIS SHUFFLE " + counter);
-
-            counter++;
         }
     }
 }
