@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Deck()
+comment0.text=\n\ Creates\ new\ empty\ deck\ of\ cards\n
+comment1.params=
+comment1.target=void\ loadDeck()
+comment2.params=cardToAdd
+comment2.target=void\ addCard(Card)
+comment2.text=\n\ @param\ cardToAdd\ add\ card\ to\ the\ deck\ array\n
+comment3.params=
+comment3.target=Card\ takeCard()
+comment3.text=\n\ Used\ to\ take\ the\ top\ card\ from\ the\ deck\n
+comment4.params=
+comment4.target=void\ showDeck()
+comment4.text=\n\ Used\ to\ display\ the\ deck\n
+comment5.params=index1\ index2
+comment5.target=void\ swap(int,\ int)
+comment5.text=\n\ Used\ to\ swap\ the\ deck\ possition\ of\ index1\ and\ index2\n\ @param\ index1\ Sets\ the\ first\ card\ to\ swap\n\ @param\ index2\ Sets\ the\ second\ card\ to\ swap\n
+comment6.params=
+comment6.target=void\ shuffle()
+comment6.text=\n\ This\ is\ used\ to\ shuffle\ the\ deck\ the\ 10\ times\n
+numComments=7

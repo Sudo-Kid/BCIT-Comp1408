@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.params=
+comment0.target=TreeFarm()
+comment0.text=\n\ Constructor\ for\ objects\ of\ class\ TreeFarm\n
+comment1.params=tree
+comment1.target=void\ addTree(Tree)
+comment1.text=\n\ @param\ tree\ adds\ tree\ to\ TreeFarm\n
+comment2.params=
+comment2.target=void\ showAllTrees()
+comment2.text=\n\ Displays\ all\ the\ trees\ in\ the\ farm\n
+comment3.params=age
+comment3.target=void\ logOldTrees(java.lang.Integer)
+comment3.text=\n\ @param\ age\ removes\ all\ trees\ \=\ to\ or\ >\ age\n
+comment4.params=tree1\ tree2
+comment4.target=void\ swap(int,\ int)
+comment4.text=\n\ @param\ tree1\ sets\ the\ first\ tree\ to\ use\ in\ swap\n\ @param\ tree2\ sets\ the\ second\ tree\ to\ use\ in\ swap\n
+numComments=5
